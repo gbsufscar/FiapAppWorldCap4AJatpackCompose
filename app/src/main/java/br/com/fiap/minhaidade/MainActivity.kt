@@ -102,6 +102,7 @@ fun CounterScreen() {
             }
             }
         Spacer(modifier = Modifier.height(32.dp)) // Epaçamento
+        /* Código Gustavo Superado
         Row() {
         Text(text = "Você é maior de idade!",
             fontSize = 24.sp,
@@ -109,6 +110,24 @@ fun CounterScreen() {
             fontWeight = FontWeight.Bold
         )
         }
+        */
+        // Novo trecho de código com condicional
+        Row() {
+            if (idade.value >= 18) {
+                Text(text = "Você é maior de idade!",
+                    fontSize = 24.sp,
+                    color = Color(0xFFAD1F4E),
+                    fontWeight = FontWeight.Bold
+                )
+            } else {
+                Text(text = "Você é menor de idade!",
+                    fontSize = 24.sp,
+                    color = Color(0xFFAD1F4E),
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+
 
         }
 
