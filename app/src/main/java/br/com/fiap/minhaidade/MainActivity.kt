@@ -111,6 +111,8 @@ fun CounterScreen() {
         )
         }
         */
+
+        /*
         // Novo trecho de código com condicional
         Row() {
             if (idade.value >= 18) {
@@ -127,22 +129,31 @@ fun CounterScreen() {
                 )
             }
         }
+        */
 
-
+        // Chamada de um Composablem dentro da CounterScreen para frase de maioridade.
+        TextIdade(idade.value) // Parâmetro: valor do objeto idade
         }
 
     }
-    /*
-    // Função fraseMaioridade
-    fun fraseMaioridade(idade: Int){
-        var frase: String = ""
-        if(idade >= 18){
-            frase = "Você é maior de idade!"
+
+    // Composable com a função de fraseMaioridade
+    @Composable
+    fun TextIdade(idade: Int) {
+        var text = ""
+        text = if (idade >= 18) {
+            "Você é maior de idade!"
         } else {
-            frase: "Você é menor de idade!"
+            "Você é menor de idade!"
         }
+
+        Text(text = text,
+            fontSize = 24.sp,
+            color = Color(0xFFAD1F4E),
+            fontWeight = FontWeight.Bold
+        )
     }
-    */
+
 
 
     @Preview(showBackground = true, showSystemUi = true)
