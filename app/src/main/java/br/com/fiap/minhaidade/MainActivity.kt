@@ -102,34 +102,6 @@ fun CounterScreen() {
             }
             }
         Spacer(modifier = Modifier.height(32.dp)) // Epaçamento
-        /* Código Gustavo Superado
-        Row() {
-        Text(text = "Você é maior de idade!",
-            fontSize = 24.sp,
-            color = Color(0xFFAD1F4E),
-            fontWeight = FontWeight.Bold
-        )
-        }
-        */
-
-        /*
-        // Novo trecho de código com condicional
-        Row() {
-            if (idade.value >= 18) {
-                Text(text = "Você é maior de idade!",
-                    fontSize = 24.sp,
-                    color = Color(0xFFAD1F4E),
-                    fontWeight = FontWeight.Bold
-                )
-            } else {
-                Text(text = "Você é menor de idade!",
-                    fontSize = 24.sp,
-                    color = Color(0xFFAD1F4E),
-                    fontWeight = FontWeight.Bold
-                )
-            }
-        }
-        */
 
         // Chamada de um Composablem dentro da CounterScreen para frase de maioridade.
         TextIdade(idade.value) // Parâmetro: valor do objeto idade
@@ -137,7 +109,7 @@ fun CounterScreen() {
 
     }
 
-    // Composable com a função de fraseMaioridade
+    // Composable com a função da frase de Mioridade
     @Composable
     fun TextIdade(idade: Int) {
         var text = ""
@@ -154,8 +126,7 @@ fun CounterScreen() {
         )
     }
 
-
-
+    // Permitir a visualização da aplicação enquanto se promove as mudanças no código
     @Preview(showBackground = true, showSystemUi = true)
     @Composable
     fun CounterScreenPreview() {
